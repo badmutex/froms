@@ -1,0 +1,25 @@
+* Description
+
+I wanted a generic way to pull data out of a functor without explicitly calling the data-specific 'fromFOO' function.
+Thus the Defunctor is a class for Functor f such that 'from :: f a -> a'; f should support 'from' calls, so the Maybe
+monad may not be a good candidate for an instance.
+
+* Building and installing:
+
+$ cd defunctor
+$ cabal configure
+$ cabal build
+$ cabal install
+
+* Usage
+
+-- In haskell code:
+import Data.Defunctor
+
+data Foo = Foo String
+
+instance Functor Foo where
+    -- provide definition for 'fmap'
+
+instance Defunctor Foo where
+    from (Foo f) = f
