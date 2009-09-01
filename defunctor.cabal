@@ -1,0 +1,18 @@
+Name            : Defunctor
+Version         : 1.0
+Cabal-Version   : >= 1.2
+License         : BSD3
+License-File    : LICENSE
+Author          : Badi' Abdul-Wahid
+Maintainer      : abdulwahidc@gmail.com
+Homepage        : http://github.com/badi/defunctor
+Category        : DataStructures
+Synopsis        : Provide a class-based function to pull values out of functors.
+Build-Type      : Simple
+Description     : I wanted a generic way to pull data out of a functor without explicitly calling the data-specific 'fromFOO' function. \
+                  Thus the Defunctor is a class for Functor f such that 'from :: f a -> a'; f should support 'from' calls, so the Maybe \
+                  monad may not be a good candidate for an instance.
+
+Library
+    Build-depends		: base
+    Exposed-modules		: Data.Defunctor
