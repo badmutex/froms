@@ -9,10 +9,8 @@ Homepage        : http://github.com/badi/defunctor
 Category        : DataStructures
 Synopsis        : Provide a class-based function to pull values out of functors.
 Build-Type      : Simple
-Description     : I wanted a generic way to pull data out of a functor without explicitly calling the data-specific 'fromFOO' function. \
-                  Thus the Defunctor is a class for Functor f such that 'from :: f a -> a'; f should support 'from' calls, so the Maybe \
-                  monad may not be a good candidate for an instance.
+Description     : A generic way to pull the contained data out of functors and simple data types.
 
 Library
     Build-depends		: base
-    Exposed-modules		: Data.Defunctor
+    Exposed-modules		: Data.Defunctor Data.From
